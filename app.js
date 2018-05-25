@@ -2,7 +2,7 @@ function searchMealByCategory(category) {
   let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
   $.getJSON(url, function(data) {
     let mealId = data.meals[Math.floor(Math.random() * data.meals.length)].idMeal;
-    console.log(mealId);
+    searchMealDetailsById(mealId);
   });
 }
 
@@ -15,7 +15,10 @@ function searchCocktailByIngredient(ingredient) {
 }
 
 function searchMealDetailsById(mealId) {
-
+  let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+  $.getJSON(url, function(data) {
+    console.log(data.meals);
+  });
 }
 
 function searchCocktailDetailsById(cocktailId) {
