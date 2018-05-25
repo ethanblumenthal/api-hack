@@ -1,11 +1,9 @@
 function searchMealByCategory(category) {
-  // let query = {
-  //   location: search,
-  //   categories: 'Breweries',
-  //   limit: 10,
-  //   sort_by: 'rating'
-  // }
-  // $.getJSON(YELP_URL, query, callback);
+  let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+  $.getJSON(url, function(data) {
+    let mealId = data.meals[Math.floor(Math.random() * data.meals.length)].idMeal;
+    console.log(mealId);
+  });
 }
 
 function searchCocktailByIngredient(ingredient) {
