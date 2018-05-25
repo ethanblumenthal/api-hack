@@ -10,7 +10,7 @@ function searchCocktailByIngredient(ingredient) {
   let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`;
   $.getJSON(url, function(data) {
     let cocktailId = data.drinks[Math.floor(Math.random() * data.drinks.length)].idDrink;
-    console.log(cocktailId);
+    searchCocktailDetailsById(cocktailId);
   });
 }
 
@@ -22,7 +22,10 @@ function searchMealDetailsById(mealId) {
 }
 
 function searchCocktailDetailsById(cocktailId) {
-
+  let url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`;
+  $.getJSON(url, function(data) {
+    console.log(data.drinks);
+  });
 }
 
 function handleSubmit() {
