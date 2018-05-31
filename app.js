@@ -9,7 +9,7 @@ function searchMealByCategory(meal) {
 function searchDrinkByCategory(drink) {
   let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${drink}`;
   $.getJSON(url, function(data) {
-    let cocktailId = data.drinks[Math.floor(Math.random() * data.drinks.length)].idDrink;
+    let drinkId = data.drinks[Math.floor(Math.random() * data.drinks.length)].idDrink;
     searchCocktailDetailsById(drinkId);
   });
 }
@@ -33,8 +33,6 @@ function handleSubmit() {
     e.preventDefault();
     let meal = $('#meal').val();
     let drink = $('#drink').val();
-    // $('#meal').val('');
-    // $('#drink').val('');
     searchMealByCategory(meal);
     searchDrinkByCategory(drink);
   });
