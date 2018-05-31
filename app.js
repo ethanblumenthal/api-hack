@@ -25,20 +25,25 @@ function searchMealDetailsById(mealId) {
 function searchDrinkDetailsById(drinkId) {
   let url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`;
   $.getJSON(url, function(data) {
-    console.log(data.drinks);
+    let drinkDetails = data.drinks[0];
+    renderDrinkResults(drinkDetails);
   });
 }
 
 function renderMealResults(mealDetails) {
-  $('#search').html(
+  $('#mealResults').html(
     `<h1>${mealDetails.strMeal}</h1>
     <img src="${mealDetails.strMealThumb}" />
     <p>${mealDetails.strInstructions}</p>`
   );
 }
 
-function renderDrinkResults() {
-  
+function renderDrinkResults(drinkDetails) {
+  $('#drinkResults').html(
+    `<h1>${drinkDetails.strDrink}</h1>
+    <img src="${drinkDetails.strDrinkThumb}" />
+    <p>${drinkDetails.strInstructions}</p>`
+  );
 }
 
 function handleSubmit() {
