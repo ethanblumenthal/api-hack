@@ -1,3 +1,4 @@
+// SEARCHES FOR A RANDOM PAIRING
 function searchMealByCategory(meal) {
   let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${meal}`;
   $.getJSON(url, function(data) {
@@ -14,6 +15,7 @@ function searchDrinkByCategory(drink) {
   });
 }
 
+// SEARCHES FOR DETAILS ABOUT PAIRING
 function searchMealDetailsById(mealId) {
   let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
   $.getJSON(url, function(data) {
@@ -30,6 +32,7 @@ function searchDrinkDetailsById(drinkId) {
   });
 }
 
+// RENDERS DETAILS ABOUT PAIRING TO PAGE
 function renderMealResults(mealDetails) {
   $('#mealResults').html(
     `<h1>${mealDetails.strMeal}</h1>
@@ -46,6 +49,7 @@ function renderDrinkResults(drinkDetails) {
   );
 }
 
+// HANDLES USER EVENTS
 function handleSubmit() {
   $('#search').submit((e) => {
     e.preventDefault();
