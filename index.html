@@ -4,19 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>API Hack</title>
+  <title>Potluck Search</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  <header role="banner">
+    <h1>Potluck Search!</h1>
+    <h3>Find the perfect recipe pairing!</h3>
+  </header>
   <main role="main">
     <form id="form">
-      <legend>Search for the perfect recipe pairing!</legend>
-      <label for="category">Meal Category</label>
-      <input type="text" name="category" id="category">
 
-      <label for="ingredient">Cocktail Ingredient</label>
-      <input type="text" name="ingredient" id="ingredient">
+      <label for="meal">Meal</label>
+      <select name="meal">
+        <option value="beef">Beef</option>
+        <option value="chicken">Chicken</option>
+        <option value="desert">Dessert</option>
+        <option value="lamb">Lamb</option>
+        <option value="miscellaneous">Miscellaneous</option>
+        <option value="pasta">Pasta</option>
+        <option value="pork">Pork</option>
+        <option value="seafood">Seafood</option>
+        <option value="side">Side</option>
+        <option value="starter">Starter</option>
+        <option value="vegan">Vegan</option>
+        <option value="vegetarian">Vegetarian</option>
+      </select>
+
+      <label for="drink">Drink</label>
+      <select name="drink">
+        <option value="ordinary_drink">Ordinary Drink</option>
+        <option value="cocktail">Cocktail</option>
+        <option value="milk_/_float_/_shake">Milk / Float / Shake</option>
+        <option value="other_unknown">Other / Unknown</option>
+        <option value="cocoa">Cocoa</option>
+        <option value="shot">Shot</option>
+        <option value="coffee_tea">Coffee / Tea</option>
+        <option value="homemade_liqueur">Homemade Liqueur</option>
+        <option value="punch_/_party_drink">Punch / Party Drink</option>
+        <option value="beer">Beer</option>
+        <option value="soft_drink_/_soda">Soft Drink / Soda</option>
+      </select>
+
       <button type="submit">Search</button>
     </form>
   </main>
