@@ -10,13 +10,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  <div class="container">
   <header role="banner">
-    <h1>Potluck Roulette!</h1>
-    <h3>Find the perfect recipe pairing!</h3>
+    <div class="jumbotron">
+      <h1 class="display-4">Potluck Roulette!</h1>
+      <hr class="my-4">
+      <h3 class="lead">Find the perfect recipe pairing!</h3>
+    </div>
   </header>
 
   <main role="main">
-    <div class="container-fluid">
     <form id="search">
       <div class="form-group">
         <label for="meal">Meal</label>
@@ -37,7 +40,7 @@
       </div>
 
       <div class="form-group">
-      <label for="drink">Drink</label>
+        <label for="drink">Drink</label>
         <select name="drink" id="drink" class="form-control">
           <option value="ordinary_drink">Ordinary Drink</option>
           <option value="cocktail">Cocktail</option>
@@ -52,14 +55,13 @@
           <option value="soft_drink_/_soda">Soft Drink / Soda</option>
         </select>
       </div>
-
       <button type="submit" class="btn btn-primary">Search</button>
     </form>
-  </div>
+
     <div id="mealResults"></div>
     <div id="drinkResults"></div>
-    
   </main>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>

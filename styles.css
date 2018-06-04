@@ -1,0 +1,12 @@
+#search {
+  width: 33%;
+  margin: auto;
+}
+
+body {
+  background: black;
+}
+
+label {
+  font-weight: 700;
+}
