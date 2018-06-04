@@ -35,17 +35,25 @@ function searchDrinkDetailsById(drinkId) {
 // RENDERS DETAILS ABOUT PAIRING TO PAGE
 function renderMealResults(mealDetails) {
   $('#mealResults').html(
-    `<h1>${mealDetails.strMeal}</h1>
-    <img src="${mealDetails.strMealThumb}" class="image" />
-    <p>${mealDetails.strInstructions}</p>`
+    `<a href="#">
+      <img src="${mealDetails.strMealThumb}" />
+      <div class="card-content">
+        <h2>${mealDetails.strMeal}</h2>
+        <p>${mealDetails.strInstructions}</p>
+      </div>
+    </a>`
   );
 }
 
 function renderDrinkResults(drinkDetails) {
   $('#drinkResults').html(
-    `<h1>${drinkDetails.strDrink}</h1>
-    <img src="${drinkDetails.strDrinkThumb}"  class="image" />
-    <p>${drinkDetails.strInstructions}</p>`
+    `<a href="#">
+      <img src="${drinkDetails.strDrinkThumb}" />
+      <div class="card-content">
+        <h2>${drinkDetails.strDrink}</h2>
+        <p>${drinkDetails.strInstructions}</p>
+      </div>
+    </a>`
   );
 }
 
