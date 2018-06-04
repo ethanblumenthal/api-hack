@@ -27,9 +27,15 @@ body {
 }
 
 /* RECIPE STYLES */
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .card {
   background: white;
-  max-width: 40%;
+  width: 500px;
 	margin-bottom: 2em;
 }
 
@@ -55,10 +61,10 @@ body {
 .card-content h2 {
 	margin-top: 0;
 	margin-bottom: .5em;
-	font-weight: normal;
+  font-weight: normal;
+  color: #e74c3c
 }
 
 .card-content p {
 	font-size: 95%;
 }
-
