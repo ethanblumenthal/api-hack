@@ -36,7 +36,7 @@ function searchDrinkDetailsById(drinkId) {
 function renderMealResults(mealDetails) {
   $('#mealResults').html(
     `<h1>${mealDetails.strMeal}</h1>
-    <img src="${mealDetails.strMealThumb}" />
+    <img src="${mealDetails.strMealThumb}" class="image" />
     <p>${mealDetails.strInstructions}</p>`
   );
 }
@@ -44,7 +44,7 @@ function renderMealResults(mealDetails) {
 function renderDrinkResults(drinkDetails) {
   $('#drinkResults').html(
     `<h1>${drinkDetails.strDrink}</h1>
-    <img src="${drinkDetails.strDrinkThumb}" />
+    <img src="${drinkDetails.strDrinkThumb}"  class="image" />
     <p>${drinkDetails.strInstructions}</p>`
   );
 }

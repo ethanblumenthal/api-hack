@@ -10,17 +10,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
-  <header role="banner">
-    <div class="jumbotron">
-      <h1 class="display-4">Potluck Roulette!</h1>
-      <hr class="my-4">
-      <h3 class="lead">Find the perfect recipe pairing!</h3>
-    </div>
+  <header role="banner" class="hero">
+    <h1 class="title">Potluck Roulette</h1>
   </header>
 
-  <main role="main">
+  <main role="" class="container">
     <form id="search">
+      <h3>Find the perfect recipe pairing!</h3>
+
       <div class="form-group">
         <label for="meal">Meal</label>
         <select name="meal" id="meal" class="form-control">
@@ -58,10 +55,11 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
-    <div id="mealResults"></div>
-    <div id="drinkResults"></div>
+    <div class="row">
+      <div id="mealResults"></div>
+      <div id="drinkResults"></div>
+    </div>
   </main>
-  </div>
   <script src="app.js"></script>
 </body>
 </html>
