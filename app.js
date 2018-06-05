@@ -35,7 +35,7 @@ function searchDrinkDetailsById(drinkId) {
 // RENDERS DETAILS ABOUT PAIRING TO PAGE
 function renderMealResults(mealDetails) {
   $('#mealResults').html(
-    `<a href="#">
+    `<a href="${mealDetails.strYoutube}">
       <img src="${mealDetails.strMealThumb}" />
       <div class="card-content">
         <h2>${mealDetails.strMeal}</h2>
@@ -47,7 +47,7 @@ function renderMealResults(mealDetails) {
 
 function renderDrinkResults(drinkDetails) {
   $('#drinkResults').html(
-    `<a href="#">
+    `<a href="${drinkDetails.strDrinkThumb}">
       <img src="${drinkDetails.strDrinkThumb}" />
       <div class="card-content">
         <h2>${drinkDetails.strDrink}</h2>
